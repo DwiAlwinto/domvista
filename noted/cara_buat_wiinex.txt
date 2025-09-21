@@ -1,0 +1,30 @@
+1. Buat database di laragon db_wiinex dan rubah .env ya db_database ya
+2. setalah itu migrate ke db_wiinex di terminal : php artisan migrate   (untuk kirim data di db_winnex yang dibuat manual)
+3. Setelah itu membuat Contoler ya : php artisan make:controller AdminUserController -r (-r dibuatkan otomatis crud ya). posis file ya ada di app/Http/Controllers
+
+4. Ketika ingin menambahkn col di tabel user contoh col rol dan foto_profil.
+    masuk ke database -> migrations -> cara migrate lalu edit
+    ketika suda diedit :
+    1. php artisan migrate:rollback
+    2. php artisan migrate
+5. Untuk stroge link foto_profil :
+    php artisan storage:link
+    ketika storage ilang tidak muncul:
+    rm public/storage
+    php artisan storage:link
+
+
+5. Membuat halama Login :
+    Membuat Controllers ya AdminAuthController :
+    php artisan make:controller AdminAuthController
+
+6. Untuk sweet Alert :
+https://realrashid.github.io/sweet-alert/
+1. composer require realrashid/sweet-alert
+
+
+
+
+
+
+jalankan seeder tanpa riset tabel

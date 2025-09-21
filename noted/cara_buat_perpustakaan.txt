@@ -1,0 +1,50 @@
+password : Alwin3005:
+           Ekayuliana01
+           Tiaradewi01
+           Agussupriatna01
+           Ariemaulana01
+           Zulkifli01
+
+email :    alwin@gmail.com alwin@gmail.com mustika@gmail.com
+
+
+untuk migrate datbase 
+buat datbase baru :  
+lalu :  php artisan migrate
+
+
+untuk stroge link foto_profil :
+php artisan storage:link
+
+ketika storage ilang :
+ rm public/storage
+ php artisan storage:link
+
+untuk Anggota :
+ php artisan make:model Anggota -m (-m untuk membuat migrate ya juga di )
+ edit migrations ya.
+ push ke datbase :  php artisan migrate
+ 
+ untuk membuat controller ya Anggota
+ php artisan make:controller AdminAnggotaController -r
+
+
+ membut jenis buku
+ php artisan make:model -m
+
+ edit didatabase->migrations jenis 
+ dan push stelah itu
+ 
+ buat controller 
+ php artisan make:controller AdminJenisAnggota -r
+
+ setalh setting route ya 
+
+ # Jalankan semua migration
+php artisan migrate
+
+# Jika ada error, coba fresh migrate
+php artisan migrate:fresh
+
+# Lihat status migration
+php artisan migrate:status
